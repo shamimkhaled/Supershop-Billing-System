@@ -8,15 +8,15 @@ Type of app: Stand-alone application for desktop and laptop computers
 
 Main features:
 
+- Add and cancel customer reservation information: customer can reserve a product and cancel the reservation
 - Add Product information: product_name, cost_of_product, company name, product_type/category, save product
+- Update product information
 - View all product report or information
 - View individual product information
 - Add sells information: customer_name/id, phone no,  billing option, and also select product & quantity, add item, total amount
 - View & print customers billing information
 - View all sales report or information
 - Login panel: Username, password
-- Logout & Exit
-- About project
 
 Operating system: Windows/Linux/Mac OS
 
@@ -27,7 +27,7 @@ How to use:
   Run the trustandmart.jar file or run the project from netbeans.
 
 
-Written in: Java
+Written in: Java, MySQL
 
 Tools/framework used: Netbeans, Scene Builder
 
