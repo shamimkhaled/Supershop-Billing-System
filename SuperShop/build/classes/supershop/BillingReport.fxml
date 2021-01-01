@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="860.0" style="-fx-border-color: grey;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="supershop.BillingReportController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="40.0" prefHeight="54.0" prefWidth="774.0" spacing="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select Product">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="productComboBox" prefWidth="180.0" promptText="select product" />
+            <Text layoutX="10.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="qtyComboBox" layoutX="100.0" layoutY="10.0" prefWidth="180.0" promptText="select quantity" />
+            <Button mnemonicParsing="false" onAction="#addItemsAction" prefHeight="26.0" prefWidth="116.0" text="Add Items">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Dashboard">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TableView fx:id="salesTableView" layoutX="23.0" layoutY="115.0" prefHeight="200.0" prefWidth="814.0">
+        <columns>
+          <TableColumn fx:id="custIdColumn" prefWidth="93.60000801086426" text="Customer Id" />
+          <TableColumn fx:id="custNameColumn" prefWidth="172.80004119873047" text="Customer Name" />
+            <TableColumn fx:id="productNameColumn" prefWidth="186.39996337890625" text="Product Name" />
+            <TableColumn fx:id="costColumn" prefWidth="154.40005493164062" text="Cost Per Unit" />
+            <TableColumn fx:id="quantityColumn" prefWidth="92.0" text="Quantity" />
+            <TableColumn fx:id="totalColumn" prefWidth="164.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="185.0" layoutY="332.0" text="Total Cost :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalCostLabel" layoutX="301.0" layoutY="337.0" />
+      <Button layoutX="448.0" layoutY="332.0" mnemonicParsing="false" onAction="#saveAndExitAction" prefHeight="26.0" prefWidth="116.0" text="Save &amp; Exit" />
+      <Button layoutX="598.0" layoutY="332.0" mnemonicParsing="false" onAction="#printViewAction" prefHeight="26.0" prefWidth="89.0" text="Print" />
+      <Button layoutX="732.0" layoutY="333.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="26.0" prefWidth="89.0" text="Delete" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="supershop.ProductManagementController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="710.0" style="-fx-background-color: #0091ea;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#edebeb" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Management" wrappingWidth="288.92462158203125">
+               <font>
+                  <Font name="Impact" size="28.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="349.0" prefWidth="740.0" style="-fx-border-color: grey; -fx-background-color: #a7ffeb;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="69.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Id">
+               <font>
+                  <Font name="Constantia" size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="productId" layoutX="187.0" layoutY="15.0" prefHeight="34.0" prefWidth="306.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="productName" layoutX="187.0" layoutY="66.0" prefHeight="34.0" prefWidth="306.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Text layoutX="69.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name">
+               <font>
+                  <Font name="Constantia" size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="costPerUnit" layoutX="187.0" layoutY="117.0" prefHeight="33.0" prefWidth="306.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Text layoutX="69.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost Per Unit">
+               <font>
+                  <Font name="Constantia" size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="category" layoutX="187.0" layoutY="217.0" prefHeight="33.0" prefWidth="306.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="companyName" layoutX="187.0" layoutY="167.0" prefHeight="33.0" prefWidth="306.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Text layoutX="69.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name">
+               <font>
+                  <Font name="Constantia" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="69.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category">
+               <font>
+                  <Font name="Constantia" size="16.0" />
+               </font>
+            </Text>
+            <Button layoutX="187.0" layoutY="282.0" mnemonicParsing="false" onAction="#saveProductAction" prefHeight="35.0" prefWidth="136.0" text="Save Product">
+               <font>
+                  <Font name="Constantia" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="370.0" layoutY="282.0" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="35.0" prefWidth="136.0" text="Cancel">
+               <font>
+                  <Font name="Constantia" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="productTableView" prefHeight="215.0" prefWidth="740.0" style="-fx-background-color: #a7ffeb;">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="95.20001375675201" text="ID" />
+                  <TableColumn fx:id="productNameColumn" minWidth="7.199981689453125" prefWidth="230.4000244140625" text="Product Name" />
+                  <TableColumn fx:id="costColumn" prefWidth="140.0" text="Cost" />
+                  <TableColumn fx:id="companyColumn" prefWidth="182.4000244140625" text="Company Name" />
+                  <TableColumn fx:id="categoryColumn" prefWidth="172.800048828125" text="Category" />
+               </columns>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TableView>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
